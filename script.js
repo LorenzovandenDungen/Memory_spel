@@ -1,10 +1,10 @@
 const cardsArray = [
-    { name: 'cat', img: 'sandbox:/mnt/data/A_simple_image_of_a_cute_cat,_centered,_with_a_whi.png' },
-    { name: 'flower', img: 'sandbox:/mnt/data/A_simple_image_of_a_colorful_flower,_centered,_wit.png' },
-    { name: 'soccer', img: 'sandbox:/mnt/data/A_simple_image_of_a_soccer_ball,_centered,_with_a_.png' },
-    { name: 'sun', img: 'sandbox:/mnt/data/A_simple_image_of_a_smiling_sun,_centered,_with_a_.png' },
-    { name: 'apple', img: 'sandbox:/mnt/data/A_simple_image_of_a_red_apple,_centered,_with_a_wh.png' },
-    { name: 'star', img: 'sandbox:/mnt/data/A_simple_image_of_a_blue_star,_centered,_with_a_wh.png' }
+    { name: 'cat', img: 'images/cat.png' },
+    { name: 'flower', img: 'images/flower.png' },
+    { name: 'soccer', img: 'images/soccer.png' },
+    { name: 'sun', img: 'images/sun.png' },
+    { name: 'apple', img: 'images/apple.png' },
+    { name: 'star', img: 'images/star.png' }
 ];
 
 let gameGrid = cardsArray.concat(cardsArray).sort(() => 0.5 - Math.random());
@@ -33,7 +33,7 @@ function createBoard() {
         card.dataset.initials = 'AB'; // Voeg hier je initialen toe
         const front = document.createElement('div');
         front.classList.add('front');
-        front.style.backgroundImage = "url('sandbox:/mnt/data/Create_a_simple_white_background_image_with_the_in.png')";
+        front.style.backgroundImage = "url('images/back.png')";
         const back = document.createElement('img');
         back.classList.add('back');
         back.src = item.img;
