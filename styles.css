@@ -1,0 +1,78 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+}
+
+#game {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#players {
+    display: flex;
+    justify-content: space-between;
+    width: 300px;
+    margin-bottom: 20px;
+}
+
+#players div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#board {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 440px;
+}
+
+.card {
+    width: 90px;
+    height: 90px;
+    margin: 10px;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    position: relative;
+    transform: scale(1);
+    transition: transform 0.2s;
+}
+
+.card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card.flipped img {
+    display: none;
+}
+
+.card.flipped::before {
+    content: attr(data-initials);
+    position: absolute;
+    font-size: 2em;
+    color: #000;
+}
+
+#restart {
+    margin-top: 20px;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+#winner {
+    margin-top: 20px;
+    font-size: 1.5em;
+}
